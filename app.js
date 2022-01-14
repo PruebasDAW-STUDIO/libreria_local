@@ -16,6 +16,7 @@ var helmet = require('helmet');
 require('./db.js');
 
 app.use(compression());
+
 app.use(helmet());
 
 var indexRouter = require('./routes/index');
