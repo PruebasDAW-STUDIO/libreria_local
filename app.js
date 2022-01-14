@@ -15,9 +15,7 @@ var helmet = require('helmet');
 
 require('./db.js');
 
-app.use(compression());
 
-app.use(helmet());
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -26,6 +24,9 @@ var wikiRouter = require('./routes/wiki');
 var catalogRouter = require('./routes/catalog');
 
 var app = express();
+
+app.use(compression());
+app.use(helmet());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
