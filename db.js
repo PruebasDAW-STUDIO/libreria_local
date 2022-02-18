@@ -1,7 +1,11 @@
 var mongoose = require("mongoose");
 
+if (process.env.NODE_ENV === 'production'){
+        var mongoDB = process.env.MONGODB_URI_PROD;
+}else{
+        var mongoDB = process.env.MONGODB_URI_DEV;
 
-var mongoDB = process.env.MONGODB_URI_PROD;
+}
 
 
 

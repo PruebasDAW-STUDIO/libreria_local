@@ -1,9 +1,7 @@
 require('dotenv').config();
 console.log(process.env.NODE_ENV);
 
-if (process.env.NODE_ENV === 'production'){
-  
-}
+
 
 var createError = require('http-errors');
 var express = require('express');
